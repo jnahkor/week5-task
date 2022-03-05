@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    color: #151515;
+}
+
+.movie-card {
+    margin-top: 5rem;
+    height: 750px;
+    text-align: center;
+}
+
+.movie-title {
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(-150px);
+    animation: slide-from-top-title 3.5s ease-in-out forwards;
+}
+
+@keyframes slide-from-top-title {
+    50% {opacity: 0;}
+    100% {transform: translateY(0);
+    opacity: 1;}
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(83, 83, 83, 0.699);
+    z-index: 2;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+
+.modal-content {
+    background-color: rgb(75, 75, 75);
+    margin: 5% auto;
+    color: rgb(216, 214, 214);
+    padding: 5rem;
+    width: 600px;
+    height: 660px;
+    border-radius: 5px;
+    animation: zoom-in 0.7s;
+}
+
+@keyframes zoom-in {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+
+.modal-content h1 {
+    margin-top: 1rem;
+}
+
+.modal-content p {
+    margin-top: 1rem;
+    font-style: italic;
+    color: rgb(168, 168, 168);
+}
+
+.closeBtn {
+    float: right;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.movie-poster-modal {
+    width: 300px;
+    border-radius: 5px;
+}
+
+.movie-poster-container img {
+    position: relative;
+    left: -600px;
+    opacity: 0;
+    margin-top: 2rem;
+    height: 100%;
+    border-radius: 10px;
+    width: 333px;
+    transition: 1s;
+    animation: slide-from-left 3.5s ease-in-out forwards;
+}
+
+@keyframes slide-from-left {
+    100% {left: 0;
+    opacity: 1;}
+}
+
+.movie-poster-container img:hover {
+    transform: scale(1.05);
+    box-shadow: 8px 8px 8px -4px rgb(88, 88, 88);
+    cursor: pointer;
+}
+
+.movie-genres {
+    opacity: 0;
+    transform: translateY(-150px);
+    animation: slide-from-top-genres 3.5s ease-in-out forwards;
+}
+
+@keyframes slide-from-top-genres {
+    50% {opacity: 0;}
+    100% {opacity: 1;
+    transform: translateY(0);}
+}
+
+.movie-rating {
+    display: inline-block;
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 5px;
+    color: gray;
+}
+
+.movie-duration {
+    margin-left: 0.5rem;
+    letter-spacing: 0.2rem;
+}
+
+.movie-duration:before {
+    content: "\2022";
+    margin-right: 5px;
+}
+
+.movie-info-quote {
+    color: #151515a4;
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.movie-info-overview-title {
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+}
+
+.movie-info-actions {
+    font-size:1.1rem;
+}
+
+.movie-info-actions ul {
+    list-style: none;
+}
+
+.movie-info-actions ul li {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgb(3, 37, 65);
+    transition: 1s;
+}
+
+.movie-info-actions ul li:hover {
+    transform: scale(1.08);
+    box-shadow: 2px 2px 2px 1px gray
+}
+
+.movie-info-actions ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    margin-top: 6rem;
+    text-align: center;
+    color: #777;
+    margin-bottom: 2rem;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    display: inline-block;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+footer ul li a {
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #777;
+}
