@@ -180,8 +180,56 @@ html {
     justify-content: center;
 }
 
+.carousel {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.carousel img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.carousel .carousel__item, 
+.carousel .carousel__itme--hidden {
+    display: none;
+}
+
+.carousel .carousel__item--visible {
+    display: block;
+    animation: fadeIn 0.6s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.carousel .carousel__actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel .carousel__actions button {
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border: 0;
+    background-color: rgba(87, 85, 85, 0.555);
+    font-size: 2rem;
+    color: rgb(206, 205, 205);
+    margin: 0.5rem;
+}
+
 footer {
-    margin-top: 6rem;
+    margin-top: 25rem;
     text-align: center;
     color: #777;
     margin-bottom: 2rem;
